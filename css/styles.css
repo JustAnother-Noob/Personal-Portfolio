@@ -9,101 +9,126 @@
   }
   /* Header section */
 
-header {
+  header {
     display: flex;
-    justify-content: center; /* Center elements horizontally */
+    justify-content: center;
     align-items: center;
     padding: 20px 40px;
-  }
-  
-  .logo {
-    height: 50px;
-    width: auto;
-  }
-  
-  nav {
+    background-color: #f5f5f5;
+}
+
+.logo {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Add spacing between logo and navigation */
-  }
-  
-  nav ul {
+    justify-content: center;
+    margin-right: 20px;
+    height: 50px; /* Set a fixed height for the .logo container */
+    padding-top: 15px;
+}
+
+.logo img {
+    
+    padding-bottom: 5px;
+    height: auto; /* Allow the height to adjust automatically */
+    width: 500px; /* Set the width to 500px */
+    object-fit: contain; /* Maintain the aspect ratio */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+nav ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .nav_links a {
-    font-family: "Roboto", sans-serif; /* Example font selection */
-    font-size: 20px;
-    padding: 10px 15px;
-    color: #520c1f; /* Adjust text color based on your background image */
-    border:2px solid transparent;
+}
+
+.nav_links a {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    color: #520c1f;
     border-radius: 20px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+}
 
-  }
-  
-  nav a:hover {
-    color: #520c1f; /* Change hover text color */
-    border: 2px solid #520c1f;
-    border-radius: 20px;
-  }
-  
-  nav li {
+nav a:hover {
+    color: #fff;
+    background-color: #520c1f;
+}
+
+nav li {
     margin-right: 20px;
     position: relative;
-  }
-  
-  nav li:last-child {
+}
+
+nav li:last-child {
     margin-right: 0;
-  }
-  
-  .dropdown {
+}
+
+.dropdown {
     position: absolute;
     top: 140%;
     left: -15px;
-    background-color: #f1f1f1; /* Change dropdown background color */
+    background-color: #f1f1f1;
     display: none;
     flex-direction: column;
     padding: 10px;
-    border: 2px solid #520c1f; /* Change dropdown border color */
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle dropdown shadow */
-  }
-  
-  .dropdown li {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown li {
     margin: 0;
-    margin-bottom: 5px;
-  }
-  
-  nav li:hover .dropdown {
+    margin-bottom: 10px;
+}
+
+nav li:hover .dropdown {
     display: flex;
-  }
-  
-  .dropdown li a {
+}
+
+.dropdown li a {
     padding: 5px 20px;
-    color: #520c1f; /* Adjust text color based on your background image */
-    border:2px solid transparent;
+    color: #520c1f;
     border-radius: 20px;
-  }
-  
-  .dropdown li a:hover {
-    background-color: #ffffff; /* Change dropdown link hover color */
-    color: #520c1f; /* Change hover text color */
-    border: 2px solid #520c1f;
-    border-radius: 20px;
-  }
-  
-  .contact {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dropdown li a:hover {
+    background-color: #520c1f;
+    color: #ffffff;
+}
+
+.dropdown-toggle {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #520c1f;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.contact {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Move contact section to the right */
-  }
-  
-  .contact_button {
+    margin-left: auto;
+}
+
+.contact_button{
     background-color: #580c1f;
     text-decoration: none;
     color: white;
@@ -114,15 +139,13 @@ header {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .contact_button:hover {
+}
+
+.contact_button:hover {
     background-color: #fff;
     color: #580c1f;
     box-shadow: 0 0 0 2px #580c1f, 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  
+}
   /* Hero section styles */
   .hero {
     background-color: #ffffff;
