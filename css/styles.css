@@ -1,25 +1,14 @@
 * {
     box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Overpass', sans-serif;
     margin: 0;
     padding: 0;
   }
   
-  a {
-    color: #580c1f;
-    text-decoration: none;
+  body {
+    font-family: 'Overpass', sans-serif;
   }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Header styles */
+  /* Header section */
   header {
-    background-color: #580c1f;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +16,7 @@
   }
   
   .logo {
-    height: 0px;
+    height: 50px;
     width: auto;
   }
   
@@ -46,22 +35,59 @@
   .nav_links a {
     font-size: 20px;
     padding: 0 10px;
+    position: relative;
+    color: #580c1f;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
   }
-
+   
+  nav a:hover {
+    color: #0077cc;
+    text-decoration: none;
+    background-color: #ff0000;
+    padding-top: 10px;
+    transition: background-color 1s ease;
+  }
+  
+  
   nav li {
     margin-right: 30px;
+    position: relative;
   }
   
   nav li:last-child {
     margin-right: 0;
   }
   
-  nav a {
-    color: #ffffff;
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #580c1f;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
   }
   
-  nav a:hover {
-    color: #0077cc;
+  .dropdown li {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  
+  nav li:hover .dropdown {
+    display: flex;
+  }
+  
+  .dropdown li a {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown li a:hover {
+    background-color: #ffffff;
   }
   
   .contact {
@@ -74,10 +100,12 @@
     color: #580c1f;
     padding: 10px 20px;
     border-radius: 25px;
+    transition: background-color 0.3s ease;
   }
   
   .contact_button:hover {
     background-color: #0077cc;
+    color: #ffffff;
   }
   
   /* Hero section styles */
@@ -145,49 +173,181 @@
   .project_section-title {
     text-align: center;
     margin-bottom: 40px;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #580c1f;
   }
   
   .project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    padding: 10px 100px;
   }
   
   .project-item {
+    background-color: #c7f6d9;
+    color: #580c1f;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 33.33%;
     padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* add transition to box-shadow */
   }
   
   .project-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px) rotate(2deg); /* add rotation effect */
+    background-color: white;
+    box-shadow: 0 0 0 2px #580c1f, 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   
   .project-item img {
-    width: 70%;
+    width: 100%;
+    max-width: 250px;
     height: auto;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0 0;
   }
   
   .project-title {
     font-size: 1.5rem;
-    margin: 0;
-    color: #580c1f;
+    margin: 15px 0 10px;
     transition: color 0.3s ease;
   }
   
   .project-item:hover .project-title {
     color: #333;
   }
+
+  .cta-section {
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .cta-title {
+    font-size: 2.5rem;
+    color: #580c1f;
+    margin-bottom: 30px;
+  }
+  
+  .cta-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .cta-form input {
+    border: 2px solid #580c1f;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 50%;
+  }
+  
+  .cta-form button {
+    background-color: #580c1f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-form button:hover {
+    background-color: #fff;
+    color: #580c1f;
+    box-shadow: 0 0 0 2px #580c1f, 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .cta-form input:focus, .cta-form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #580c1f;
+  }
+
+  footer {
+    background-color: #580c1f;
+    color: #fff;
+    padding: 2rem 0;
+    position: relative;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  footer nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 1rem;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    font-size: 1.2rem;
+    border-radius: 4px;
+  }
+  
+  footer nav a:hover {
+    background-color: #ffffff;
+    color: #580c1f;
+  }
+  
+  footer nav a:active {
+    background-color: #580c1f;
+    color: #ffffff;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  
+  .social-media a {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin: 0 0.5rem;
+  }
+  
+  .social-media a:hover {
+    transform: rotate(-60deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .social-media img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+  }
+  
+  .copyright {
+    margin: 1.5rem 0;
+  }
+
+  
