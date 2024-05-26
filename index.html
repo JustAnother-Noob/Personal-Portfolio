@@ -4,35 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <script src="./a.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"></head>
+</head>
 <body>
     <header>
         <div class="logo">
-            <img src="/images/logo.png" alt="logo">
+            <a href="index.html">
+                <img src="/images/logo.png" alt="logo">
+            </a>
         </div>
-        <nav>
+        <nav id="desktop-nav">
             <ul class="nav_links">
                 <li><a href="./skills.html">Skills</a></li>
                 <li><a href="./internship.html">Internship</a></li>
                 <li><a href="./career.html">Career</a></li>
-                <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="#" >About Me</a>
-                <ul class="dropdown">
-                    <li><a href="./education.html">Education</a></li>
-                    <li><a href="./interests.html">Interests</a></li>
-                </ul>
+                <li><a href="#">About Me</a>
+                    <ul class="dropdown">
+                        <li><a href="./education.html">Education</a></li>
+                        <li><a href="./interests.html">Interests</a></li>
+                    </ul>
                 </li>
+                <li><a href="./gallery.html">Gallery</a></li>
             </ul>
         </nav>
         <div class="contact">
             <a href="./contact.html" class="contact_button">Contact</a>
         </div>
-    </header>
+        <button id="sidebar-menu-button" class="sidebar-menu-button">
+            <img id="sidebar-img" src="./images/side-bar.png" alt="Menu">
+        </button>
+            <div id="sidebar" class="side-nav">
+            <span class="close-btn">&times;</span>
+            <ul class="nav_links">
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./skills.html">Skills</a></li>
+                <li><a href="./internship.html">Internship</a></li>
+                <li><a href="./career.html">Career</a></li>
+                <li><a href="./education.html">Education</a></li>
+                <li><a href="./interests.html">Interests</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
 
+
+        </div>
+    </header>
     <section class="hero">
         <div class="hero-content">
           <img src="/images/hero_image.jpeg" alt="Basudev Devkota" class="hero-image" />
@@ -80,7 +98,7 @@
 
       <section class="cta-section">
         <h2 class="cta-title">Let's collaborate on your next project!</h2>
-        <form class="cta-form">
+        <form class="cta-form" id="cta-form">
           <input type="email" placeholder="Enter your email address" required>
           <button type="submit">Get in Touch</button>
         </form>
@@ -89,12 +107,12 @@
     <footer>
         <div class="footer-content">
             <div class="social-media">
-                <a href="#"><img src="./images/linkedin.png" alt="Linkedin"></a>
-                <a href="#"><img src="./images/github.png" alt="Github"></a>
-                <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="./images/whatsapp.png" alt="Whatsapp"></a>
-                <a href="#"><img src="./images/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com"><img src="./images/linkedin.png" alt="Linkedin"></a>
+                <a href="https://www.github.com"><img src="./images/github.png" alt="Github"></a>
+                <a href="https://www.twitter.com"><img src="./images/twitter.png" alt="Twitter"></a>
+                <a href="https://www.whatsapp.com"><img src="./images/whatsapp.png" alt="Whatsapp"></a>
+                <a href="https://www.facebook.com"><img src="./images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com"><img src="./images/instagram.png" alt="Instagram"></a>
             </div>
           <nav>
             <ul class="nav-links">
