@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     sidebarButton.addEventListener("click", function() {
         if (sidebar.style.transform === "translateX(0%)") {
-            sidebar.style.transform = "translateX(100%)"; // hide sidebar
+            sidebar.style.transform = "translateX(100%)";
         } else {
-            sidebar.style.transform = "translateX(0%)"; // show sidebar
+            sidebar.style.transform = "translateX(0%)";
         }
     });
 
@@ -26,29 +26,26 @@ document.addEventListener("DOMContentLoaded", function() {
         event.stopPropagation();
     });
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('cta-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting normally
+        event.preventDefault();
 
-        var email = event.target.elements[0].value; // Get the email input value
+        var email = event.target.elements[0].value;
 
-        // You can now use the email value, for example, to send a request to your server
         console.log('Form submitted with email:', email);
 
-        // Show the pop-up message
         alert('Thank you for your submission. We will be in touch soon!');
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting normally
+        event.preventDefault();
 
-        var email = event.target.elements[0].value; // Get the email input value
+        var email = event.target.elements[0].value;
 
-        // You can now use the email value, for example, to send a request to your server
         console.log('Form submitted with email:', email);
 
-        // Show the pop-up message
         alert('Thank you for your submission. We will be in touch soon!');
     });
 });

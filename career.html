@@ -1,112 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Home</title>
+    <script src="./a.js"></script>
+    <link rel="stylesheet" href="./trial.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
 <body>
     <header>
         <div class="logo">
-            <a href="./index.html"><img src="/images/logo.png" alt="logo"></a>
+            <a href="index.html">
+                <img src="/images/logo.png" alt="logo">
+            </a>
         </div>
-        <nav>
+        <nav id="desktop-nav">
             <ul class="nav_links">
                 <li><a href="./skills.html">Skills</a></li>
                 <li><a href="./internship.html">Internship</a></li>
                 <li><a href="./career.html">Career</a></li>
-                <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="#" >About Me</a>
-                <ul class="dropdown">
-                    <li><a href="./education.html">Education</a></li>
-                    <li><a href="./interests.html">Interests</a></li>
-                </ul>
+                <li><a href="#">About Me</a>
+                    <ul class="dropdown">
+                        <li><a href="./education.html">Education</a></li>
+                        <li><a href="./interests.html">Interests</a></li>
+                    </ul>
                 </li>
+                <li><a href="./gallery.html">Gallery</a></li>
             </ul>
         </nav>
         <div class="contact">
             <a href="./contact.html" class="contact_button">Contact</a>
         </div>
+        <button id="sidebar-menu-button" class="sidebar-menu-button">
+            <img id="sidebar-img" src="./images/side-bar.png" alt="Menu">
+        </button>
+        <div id="sidebar" class="side-nav">
+            <span class="close-btn">&times;</span>
+            <ul class="nav_links">
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./skills.html">Skills</a></li>
+                <li><a href="./internship.html">Internship</a></li>
+                <li><a href="./career.html">Career</a></li>
+                <li><a href="./education.html">Education</a></li>
+                <li><a href="./interests.html">Interests</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+
+
+        </div>
     </header>
 
-    <section class="current-experience">
-        <h2>Current Job Experience</h2>
-        <div class="jobs">
-            <div class="job">
-            <img src="./images/kitchen-hand.png" alt="Kitchen Hand">
-            <h3>Kitchen Hand</h3>
+    <section class="career-section">
+        <div>
+            <img src="./images/career-logo.jpg" alt="Internship Intro">
         </div>
-        <div class="job">
-            <img src="./images/cleaner.png" alt="Cleaner">
-            <h3>Cleaner</h3>
+
+        <div class="career-text">
+            <h2>Principal Penetration Tester</h2>
+            <p>I am passionate about cybersecurity and aim to become a penetration tester. Dedicated to identifying
+                vulnerabilities and enhancing digital security, I seek to protect sensitive information and strengthen
+                defenses against cyber threats. My goal is to use ethical hacking skills to help organizations secure
+                their data and infrastructure.</p>
         </div>
-        <div class="job">
-            <img src="./images/labourer.png" alt="Labourer">
-            <h3>Labourer</h3>
+    </section>
+    <section class="certs">
+        <h2>Certifications</h2>
+        <p>Here are some of the certs I plan to acquire for my career in Pentesting.</p>
+        <div class="certs-container">
+            <div class="cert">
+                <img src="./images/comptia.png" alt="Comptia Security+">
+                <p>Comptia Security+</p>
+            </div>
+            <div class="cert">
+                <img src="./images/cisco.png" alt="CNNA">
+                <p>CNNA</p>
+            </div>
+            <div class="cert">
+                <img src="./images/oscp.png" alt="OSCP">
+                <p>OSCP</p>
+            </div>
+            <div class="cert">
+                <img src="./images/ceh.png" alt="CEH">
+                <p>CEH</p>
+            </div>
         </div>
-        <div class="job">
-            <img src="./images/personal-care-worker.png" alt="Personal Care Worker">
-            <h3>Care Worker</h3>
+    </section>
+    <h2 id="career-h2">Current Job Experience</h2>
+
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2>Web-Design Intern</h2>
+                <p id="company">Page Turner</p>
+                <p>Gained valuable experience and enhanced my skills in web design and development during a 12-week internship.</p>
+            </div>
         </div>
-        <div class="job">
-            <img src="./images/intern.png" alt="intern">
-            <h3>Internship</h3>
+        <div class="container right">
+            <div class="content">
+                <h2>Care Worker</h2>
+                <p id="company">Uniting Communities</p>
+                <p>Provided compassionate care for elderly clients, assisting with daily living activities and ensuring their comfort and well-being.</p>
+
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>Labourer</h2>
+                <p id="company">Hutchinson Builders</p>
+                <p>Performed various manual labor tasks on construction sites, including loading and unloading materials, and site cleanup.</p>
+
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>Cleaner</h2>
+                <p id="company">Like Cleaning Services</p>
+                <p>Provided professional cleaning services for offices and residential properties, ensuring a clean and sanitary environment.</p>
+
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>Kitchenhand</h2>
+                <p id="company">Taste of The Himalayas</p>
+                <p>Worked in a fast-paced restaurant environment, assisting with food preparation and maintaining cleanliness.</p>
+
+            </div>
         </div>
     </div>
-    </section>
-
-    <section class="future-goals">
-        <h2>Future Career Goals</h2>
-        <div class="goal-container">
-            <div class="goal">
-                <img src="./images/pentesting-1.png" alt="Penetration Tester">
-                <h3>Penetration Tester</h3>
-            </div>
-            <div class="arrow">
-                <img src="./images/arrow.png" alt="Arrow">
-            </div>
-            <div class="goal">
-                <img src="./images/pentesting-2.png" alt="Senior Penetration Tester">
-                <h3>Senior Penetration Tester</h3>
-            </div>
-            <div class="arrow">
-                <img src="./images/arrow.png" alt="Arrow">
-            </div>
-            <div class="goal">
-                <img src="./images/pentesting-3.png" alt="Lead Penetration Tester">
-                <h3>Lead Penetration Tester</h3>
-            </div>
-            <div class="arrow">
-                <img src="./images/arrow.png" alt="Arrow">
-            </div>
-            <div class="goal">
-                <img src="./images/pentesting-4.png" alt="Principal Penetration Tester">
-                <h3>Principal Penetration Tester</h3>
-            </div>
-        </div>
-    </section>
-    <section class="certification-goals">
-        <h2>Certification Goals</h2>
-        <div class="container">
-            <div class="cert">
-                <img src="./images/comptia.png" alt="CompTIA Security+">
-                <h3>CompTIA Security+</h3>
-            </div>
-            <div class="cert">
-                <img src="./images/ceh.png" alt="Certified Ethical Hacker">
-                <h3>Certified Ethical Hacker</h3>
-            </div>
-            <div class="cert">
-                <img src="./images/oscp.png" alt="Offensive Security Certified Professional">
-                <h3>Offensive Security Certified Professional</h3>
-            </div>
-        </div>
-    </section>
-    
-    
 
     <footer>
         <div class="footer-content">
@@ -118,20 +144,21 @@
                 <a href="#"><img src="./images/facebook.png" alt="Facebook"></a>
                 <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
             </div>
-          <nav>
-            <ul class="nav-links">
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./skills.html">Skills</a></li>
-              <li><a href="./internship.html">Internship</a></li>
-              <li><a href="./career.html">Career</a></li>
-              <li><a href="./gallery.html">Gallery</a></li>
-              <li><a href="./education.html">Education</a></li>
-              <li><a href="./interests.html">Interests</a></li>
-              <li><a href="./contact.html">Contact</a></li>
-            </ul>
-          </nav>
-          <p class="copyright">&copy;2024 Basudev Devkota</p>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./skills.html">Skills</a></li>
+                    <li><a href="./internship.html">Internship</a></li>
+                    <li><a href="./career.html">Career</a></li>
+                    <li><a href="./gallery.html">Gallery</a></li>
+                    <li><a href="./education.html">Education</a></li>
+                    <li><a href="./interests.html">Interests</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">&copy;2024 Basudev Devkota</p>
         </div>
-      </footer>
+    </footer>
 </body>
+
 </html>
