@@ -1,3 +1,4 @@
+//Home Page
 document.addEventListener("DOMContentLoaded", function() {
     const sidebar = document.getElementById("sidebar");
     const sidebarButton = document.getElementById("sidebar-img");
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Thank you for your submission. We will be in touch soon!');
     });
 });
+//Contact Page
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
@@ -48,5 +50,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
         alert('Thank you for your submission. We will be in touch soon!');
     });
-});
+});window.onload = function() {
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
 
+    // Get the gallery section
+    var gallery = document.querySelector("#gallery");
+
+    // Get all images within the gallery
+    var images = gallery.getElementsByTagName("img");
+
+    // Add onclick event to each image
+    for (var i = 0; i < images.length; i++) {
+        images[i].onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+}
